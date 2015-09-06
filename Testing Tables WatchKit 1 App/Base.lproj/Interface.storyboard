@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Testing_Tables_WatchKit_1_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Your Workouts" id="6Ks-u7-QnE"/>
+                        <table alignment="left" id="liM-2m-Vzx">
+                            <items>
+                                <tableRow identifier="workoutRow" id="zxd-mK-dzZ" customClass="WorkoutController" customModule="Testing_Tables_WatchKit_1_Extension">
+                                    <group key="rootItem" width="1" alignment="left" layout="vertical" spacing="0.0" id="lUp-Ki-Erl">
+                                        <items>
+                                            <label width="96" alignment="left" text="Workout Title" id="NbP-e9-8Gh"/>
+                                            <label alignment="left" text="Time" id="OAv-j5-Ats">
+                                                <color key="textColor" red="1" green="0.0" blue="0.14858211595246473" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                        </items>
+                                        <connections>
+                                            <segue destination="3u5-ww-sx5" kind="modal" id="O4W-k5-cBA"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="workoutTime" destination="OAv-j5-Ats" id="IgZ-EU-aPg"/>
+                                        <outlet property="workoutTitle" destination="NbP-e9-8Gh" id="BYf-k4-UrM"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="workoutTable" destination="liM-2m-Vzx" id="frV-NJ-deX"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="31" y="301"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="cyd-FI-c1x">
+            <objects>
+                <controller hidesWhenLoading="NO" id="3u5-ww-sx5">
+                    <items>
+                        <label alignment="left" text="Workout Title" id="940-Xm-jQz"/>
+                        <label alignment="left" text="20x Push ups" id="9ll-rM-uFT">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <button width="100" alignment="center" verticalAlignment="bottom" title="Start!" id="aSe-PN-nLM">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.0" green="1" blue="0.27615591341248269" alpha="0.39000000000000001" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="5U1-3q-LWh" kind="modal" id="Pdb-8b-rRl"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <menu key="menu" id="sxz-Og-pi1">
+                        <items>
+                            <menuItem title="Menu Item" id="RIa-5k-eJJ"/>
+                        </items>
+                    </menu>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="230" y="301"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="ydH-yx-rGY">
+            <objects>
+                <controller hidesWhenLoading="NO" id="5U1-3q-LWh"/>
+            </objects>
+            <point key="canvasLocation" x="417" y="301"/>
+        </scene>
+    </scenes>
+</document>
